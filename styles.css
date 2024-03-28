@@ -1,0 +1,639 @@
+/* Reset default browser styles */
+* {
+    padding: 0;
+    margin: 0;  
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Include box-sizing for consistent sizing */
+}
+
+body{
+    background-color: #031b253d;
+    z-index: 1; 
+    color: #000;
+}
+/* Styling for the side navigation menu */
+#menu_bar {
+    width: 16em;
+    height: 100vh;
+    position: fixed;
+    right: -256px; /* Hide the menu by default */
+    top: 0;
+    background: #031b2577; /* Semi-transparent background */
+    z-index: 1; /* Ensure the menu is above other content */
+    transition: 0.4s; /* Smooth transition when the menu slides in */
+}
+
+/* Styling for the profile image */
+.profile {
+    width: 8em;
+    height: 8em;
+    position: relative;
+    margin-top: 32%;
+    margin-left: 64px;
+    top: 4%;
+    left: 1%;
+    border: 0.2rem solid #031b2580;
+    cursor: pointer;
+    border-radius: 32%;
+}
+
+/* Styling for the navigation list items */
+nav ul li {
+    list-style: none;
+    margin: 32px 8px; 
+}
+
+/* Styling for the navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+/* Add a hover effect to the navigation links */
+nav ul li a:hover,
+.dropdown-menu li a:hover {
+    background-color: #031b25;
+    color: #fff;
+}
+
+/* Style the active link */
+nav ul li a.active,
+.dropdown-menu li a.active {
+    background-color: #031b25;
+    color: #fff;
+}
+
+/* Add a hover effect to the dropdown items */
+.dropdown-menu li a:hover {
+    background-color: #031b25;
+    color: #fff;
+}
+
+/* Add a small arrow to indicate dropdowns */
+.dropdowns::after {
+    content: "▼";
+    margin-left: 4px;
+}
+
+/* Add a close button for the dropdown */
+.dropdown-menu::before {
+    content: "X";
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    background-color: #031b25;
+    min-width: 32vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation for the dropdown menu */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Styling for the menu button */
+#menuBtn {
+    text-align: center;
+    position: fixed;
+    right: 32px;
+    top: 16px;
+    border-radius: 8em; 
+    z-index: 2;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#menuBtn p{
+    font-size: .8em;
+    font-family: Helvetica;
+    position: fixed;
+    top: 4.4em;
+    text-align: justify;
+    padding-left: 4px;
+
+}
+/* Styling for the menu button image */
+#menuBtn img {
+    border: 0.2rem solid #031b2531;
+    cursor: pointer;
+    border-radius: 16%;
+}
+
+/* Change the border color of the menu button image on hover */
+#menuBtn img:hover {
+    border: 0.2rem solid #031b25a8;
+}
+
+/* Styling for the header section */
+#header {
+    width: 100%;
+    height: 64vh;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 10s infinite;
+    animation-timing-function: steps(3, end);
+    transition: background-image 3s ease-in-out;
+    cursor: pointer;
+}
+/* Keyframes */
+@keyframes slideshow {
+    0% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/background.jpg');
+    }
+    33.33% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/background2.jpg');
+    }
+    66.66% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/background3.jpg');
+    }
+    100% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/background.jpg'); /* Loop back to the first image */
+    }
+}
+
+/* Styling for the logo */
+.logo {  
+    float: left; 
+    position: absolute;
+    left: 32px;
+    top: 2vmax;
+    border-radius: 16%;
+    cursor: pointer; /* Corrected the cursor property */
+}
+.feature-container{
+    position: relative; /* Removed fixed 'top' positioning for better responsiveness */
+    top: 1em;
+    width: 100%;
+    height: 32em;
+    color: #000000;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; 
+}
+.feature-container h2{
+    align-items: center;
+    font-size: 4vmax;
+    font-family: 'Merriweather', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.featureImage {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 16%; 
+    box-shadow: 0 2px 4px #031b2583;
+    border-radius: 4px;
+    text-align: justify;
+
+}
+.featureImage {
+    background-size: cover;
+    background-position: center;
+    animation: servicesslideshow 20s infinite;
+    animation-timing-function: steps(3, end);
+    transition: background-image 4s ease-in-out;
+    cursor: pointer;
+}
+@keyframes servicesslideshow {
+    0% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage1.jpg');
+    }
+    45% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage2.jpg');
+    }
+    100% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage1.jpg'); /* Loop back to the first image */
+    }
+}
+.feature-container .featureImage{
+    display: inline-block;
+    width: 24%;
+    height: 48vh;
+    margin:auto 2rem;
+    margin-top: 4rem;
+}
+
+.header-btn{
+    margin: 70px auto 0;
+}
+.header-btn a{
+    width: 16em;
+    text-decoration:  none;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 16px 0;
+    color: #fff;
+    border: 2px solid #031b25;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s;
+}
+.header-btn a span{ 
+    height: 100%;
+    width: 64%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #031b25;
+    z-index: -1;
+    transition: 0.4s;
+}
+.header-btn a:hover span{
+    width: 100%;
+}
+.header-btn a:hover{
+    color: #000;
+}
+.header-text{
+    position: relative;
+    top: 2vmax;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 2rem; 
+}
+.header-text h1{
+    margin-top: 128px;
+    font-size: 4vmax;
+    font-family: 'Merriweather', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header-text h2{
+    font-family: 'Merriweather', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header-text p{
+    font-size: 16px;
+    font-style: italic;   
+}
+/*Styling for the Services */
+#services {
+    padding: 16em 0;
+    text-align: center;
+    position: relative; /* Removed fixed 'top' positioning for better responsiveness */
+    top: 24em;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #02040f;
+}
+
+#services .intro {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1 0 400px; /* Adjust the flex basis as needed */
+    margin: 16px; /* Increase margin for better spacing */
+    padding: 16px; /* Increase padding for better content separation */
+    box-shadow: 0 2px 4px rgba(3, 27, 37, 0.5); /* Use rgba for better opacity control */
+    border-radius: 4px;
+    background-image: linear-gradient(#031b25, #031b253f); 
+}
+
+.service-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.service-item .product {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 0.1rem solid rgba(3, 27, 37, 0.5); /* Use rgba for better opacity control */
+    border-radius: 4px; /* Smaller border-radius for the image */
+}
+
+#services .services-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Styling for the about-us  */
+#about-us {
+    margin: auto 0;
+    padding: 32px 0;
+    background-image: linear-gradient(#031b25, #031b253f);
+    text-align: left; /* Align text to the left */
+    position: relative;
+    top: 16em;
+}
+
+#about-us h2{
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #ffffff; 
+}
+#about-us h3, h4{
+    margin-bottom: 16px;
+    color: #ebdc9d; /* Yellow text color */
+}
+
+#about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff; /* Medium text color */
+}
+
+/* Styling for the Contact */
+#contact {
+    padding: 64px 0;
+    background-image: linear-gradient(#031b25, #031b253f);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 16em;
+}
+
+#contact h2 {
+    font-size: 1.4em;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+/* Styling for the contact form */
+.contact-form {
+    margin-top: 16px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    width: 64%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #031b25;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #031b25;
+}
+
+.contact-container {
+    width: 32em;
+    height: 24em;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* Styling for the contact info and social media links */
+#footer {
+    background-image: linear-gradient(#031b25, #031b2573);
+    text-align: center;
+    color: #ffffff;
+    position: relative; /* Removed fixed 'top' positioning for better responsiveness */
+    top: 16em;
+    text-align: justify;
+}
+
+#social-info, .social-media {
+    margin-bottom: 16px;
+}
+
+#social-info a {
+    color: #ffffff; /* Adjusted for better readability */
+    text-decoration: none;
+    margin: 16px;
+    transition: color 0.4s ease-in-out; /* Smooth transition for hover effect */
+}
+
+#social-info a:hover {
+    color: #2458e6; /* Highlight on hover */
+}
+
+.social-media {
+    padding: 0; /* Reset default padding */
+    margin: 0 16px; /* Adjusted margin for consistency */
+    text-align: justify;
+    font-family: Helvetica;
+}
+
+.social-media li {
+    list-style: none;
+    margin: 8px; /* Adjusted for spacing around links */
+}
+
+.social-media li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.4s ease-in-out; /* Smooth color transition for hover */
+}
+
+.social-media li a:hover {
+    color: #2458e6; /* Highlight on hover */
+}
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    max-width: 100%;
+    height: 32em;
+}
+
+#direct-link, .link-info {
+    width: 100%; /* Full width for better responsiveness */
+    margin: 8px 0; /* Added margin for spacing */
+    padding: 8px; /* Adjust padding for spacing */
+    display: flex;
+    flex-direction: column; /* Stack children elements vertically */
+    align-items: center; /* Center-align items */
+}
+
+#direct-link, #social-info {
+    flex-basis: calc(50% - 32px); /* Half of the container minus margin */
+    margin: 16px;
+    text-align: left; /* Align text to the left for readability */
+}
+
+@media screen and (max-width: 600px) {
+    #direct-link, #social-info {
+        flex-basis: 100%; /* Stack vertically on smaller screens */
+        margin: 10px 0;
+    }
+}
+
+/* Copyright Styling */
+.copyright {
+    font-size: 0.875rem; /* Sets a smaller, more appropriate font size */
+    text-align: center; /* Centers the text within the div */
+    color: #ffffff; /* Adjust this to fit your website's color scheme */
+    padding: 8px 0; /* Adds padding above and below for spacing */
+    background-color: #031b25; /* Consider matching this to your footer's background for a cohesive look */
+    border-top: 2px solid #2458e6; /* Optional: adds a subtle top border for visual separation from content */
+    height: 8vh;
+    font-family: Helvetica;
+}
+
+/* Styling for links to ensure they stand out and are easy to identify */
+.copyright p > a {
+    color: #2458e6; /* Adjust this color to fit your website's link color scheme */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.4s ease-in-out; /* Smooth transition for hover effects */
+    font-family: Helvetica;
+}
+
+/* Hover effect for links to indicate they are clickable */
+.copyright p > a:hover {
+    color: #ffffff; /* Adjust hover color to ensure it differs from the normal state */
+    text-decoration: underline; /* Optionally add underline on hover for clarity */
+}
+
+/* Media Queries *//* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container-footer {
+        width: 100%;
+    }
+
+    .link-info {
+        align-items: center;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+    .social-media li {
+        margin: 8px 0;
+    }
+    #menu_bar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    .profile {
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        margin-left: 16px;
+    }
+
+    nav ul li {
+        margin: 16px 0;
+    }
+
+    #menuBtn {
+        right: 8px;
+        top: 8px;
+    }
+
+    #menuBtn img {
+        width: 64px;
+        height: 64px;
+    }
+
+    #header {
+        height: 64vh;
+    }
+
+    .logo {
+        left: 8px;
+        top: 1vmax;
+        height: 8vmax;
+    }
+
+    .header-text {
+        top: 1vmax;
+    }
+
+    .header-text h1 {
+        margin-top: 64px;
+        font-size: 4vmax;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .feature-container {
+        top: 4rem;
+        height: 64vh;
+    }
+
+    .feature-container h2 {
+        padding-top: 2rem;
+        font-size: 2vmax;
+    }
+
+    .feature-container .featureImage {
+        top: 2rem;
+        height: 32vh;
+        margin-top: 2rem;
+    }
+
+    .header-btn {
+        margin: 64px auto 0;
+    }
+
+    .header-btn a {
+        width: 128px;
+        padding: 16px 0;
+    }
+    #about-us .container {
+        flex-direction: column;
+    }
+
+    #about-us .image-container {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .service-item {
+        flex: 1 0 100%; /* Each item takes the full width on smaller screens */
+    }
+    .container-footer {
+        flex-direction: row; /* Lay out children in a row */
+        justify-content: space-between; /* Distribute items evenly with space around them */
+    }
+
+    #direct-link, #social-info {
+        width: calc(50% - 20px); /* Take up 50% of the container width minus the margin */
+    }
+}
