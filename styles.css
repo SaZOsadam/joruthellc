@@ -1,4 +1,4 @@
-/* Reset default browser styles */
+/* Reset default browser styles *//* Global reset and fonts */
 * {
     padding: 0;
     margin: 0;  
@@ -163,12 +163,13 @@ nav ul li a.active,
 /* Styling for the logo */
 .logo {  
     float: left; 
-    position: absolute;
-    left: 32px;
+    position: relative;
+    left: 64px;
     top: 2vmax;
     border-radius: 16%;
     cursor: pointer; /* Corrected the cursor property */
 }
+
 .feature-container{
     position: relative; /* Removed fixed 'top' positioning for better responsiveness */
     top: 1em;
@@ -199,7 +200,7 @@ nav ul li a.active,
     background-size: cover;
     background-position: center;
     animation: servicesslideshow 20s infinite;
-    animation-timing-function: steps(3, end);
+    animation-timing-function: steps(4, end);
     transition: background-image 4s ease-in-out;
     cursor: pointer;
 }
@@ -210,16 +211,19 @@ nav ul li a.active,
     45% {
         background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage2.jpg');
     }
+    60% {
+        background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage3.jpg');
+    }
     100% {
         background-image: linear-gradient(#031b2580, #031b25), url('image/servicesImage1.jpg'); /* Loop back to the first image */
     }
 }
 .feature-container .featureImage{
     display: inline-block;
-    width: 24%;
-    height: 48vh;
+    width: 20%;
+    height: 40vh;
     margin:auto 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .header-btn{
@@ -330,32 +334,111 @@ nav ul li a.active,
     padding: 0 16px;
 }
 
-/* Styling for the about-us  */
+/* Styling for the about-us  *//* About Us - General Styles */
 #about-us {
-    margin: auto 0;
-    padding: 32px 0;
-    background-image: linear-gradient(#031b25, #031b253f);
-    text-align: left; /* Align text to the left */
-    position: relative;
-    top: 16em;
+    padding: 50px 0;
+}
+#about-us .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 16px;
+}
+/* About Us - Story Article */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+#about-us .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Makes sure the image is block level to take full width */
+    margin-bottom: 20px;
+}
+#about-us h2 {
+    font-size: 2rem; /* Responsive font size */
+    color: #333;
+    margin-bottom: 20px;
+}
+#about-us h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-#about-us h2{
-    font-size: 32px;
-    margin-bottom: 16px;
-    color: #ffffff; 
-}
-#about-us h3, h4{
-    margin-bottom: 16px;
-    color: #ebdc9d; /* Yellow text color */
-}
-
+/* Styling for paragraphs within the About Us sections for better readability */
 #about-us p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #fff; /* Medium text color */
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+/* About Us - Team Members */
+.team-member {
+    margin-bottom: 40px;
 }
 
+.team-member img {
+    width: 100%; /* Force image to expand to the container width */
+    max-width: 300px; /* Max width, will scale down on smaller screens */
+    margin-bottom: 20px;
+}
+
+.team-member h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    margin-bottom: 20px;
+}
+
+/* Buttons and links for interaction */
+.btn {
+    background-color: #333; /* Sample button background color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555; /* Darken button on hover for visual feedback */
+}
+
+/* Styling for social links if present */
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem; /* Set font size for social links */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #555; /* Darken social link icon on hover */
+}
+
+/* General padding for sections inside About Us for better spacing */
+#about-us section {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea; /* Add a subtle bottom border for separation */
+    margin-bottom: 20px;
+}
+
+/* Last section should not have a bottom border */
+#about-us section:last-child {
+    border-bottom: none;
+}
 /* Styling for the Contact */
 #contact {
     padding: 64px 0;
@@ -428,7 +511,16 @@ nav ul li a.active,
     top: 16em;
     text-align: justify;
 }
-
+.footer-logo{
+    float: left;
+    position: relative; 
+    top: 2vmax;
+    left: 16px;
+    border-radius: 16%;
+    cursor: pointer; /* Corrected the cursor property */
+    width: 8em;
+    height: 8em;
+}
 #social-info, .social-media {
     margin-bottom: 16px;
 }
@@ -490,12 +582,7 @@ nav ul li a.active,
     text-align: left; /* Align text to the left for readability */
 }
 
-@media screen and (max-width: 600px) {
-    #direct-link, #social-info {
-        flex-basis: 100%; /* Stack vertically on smaller screens */
-        margin: 10px 0;
-    }
-}
+
 
 /* Copyright Styling */
 .copyright {
@@ -521,6 +608,18 @@ nav ul li a.active,
 .copyright p > a:hover {
     color: #ffffff; /* Adjust hover color to ensure it differs from the normal state */
     text-decoration: underline; /* Optionally add underline on hover for clarity */
+}
+
+
+
+
+
+
+
+
+/* Responsive behavior for the About Us section */
+@media screen and (max-width: 768px) {
+   
 }
 
 /* Media Queries *//* Responsive styles */
@@ -617,13 +716,41 @@ nav ul li a.active,
         width: 128px;
         padding: 16px 0;
     }
-    #about-us .container {
-        flex-direction: column;
+    #about-us {
+        padding: 30px 20px;
     }
 
-    #about-us .image-container {
-        margin-right: 0;
-        margin-bottom: 16px;
+    #about-us .container {
+        padding: 0; /* Remove padding on smaller screens */
+    }
+
+    #about-us h2 {
+        font-size: 1.75rem; /* Slightly smaller font size for smaller screens */
+        text-align: center;
+    }
+
+    #about-us h3 {
+        font-size: 1.5rem;
+    }
+    .team-member {
+        /* Each team member will take full width on smaller screens */
+        flex-basis: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member img {
+        /* Centering image on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        display: block; /* Ensures the image doesn't inline with other elements */
+    }
+    .team-member h4 {
+        font-size: 1.25rem; /* Ensure headings are readable on mobile */
     }
     .service-item {
         flex: 1 0 100%; /* Each item takes the full width on smaller screens */
@@ -635,5 +762,43 @@ nav ul li a.active,
 
     #direct-link, #social-info {
         width: calc(50% - 20px); /* Take up 50% of the container width minus the margin */
+        flex-basis: 100%; /* Stack vertically on smaller screens */
+        margin: 10px 0;
     }
 }
+/* Adding some space on smaller screens *//* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    #about-us h2 {
+        font-size: 1.5rem; /* Decrease the font size for smaller screens */
+    }
+    .team-member {
+        padding: 0 15px; /* Add padding to the sides for better spacing */
+    }
+    .team-member h4 {
+        font-size: 1rem; /* Adjust the team member name font size */
+    }
+    .team-member p {
+        font-size: 0.875rem; /* Adjust the paragraph font size for better readability */
+    }
+    .btn {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.875rem; /* Adjust button font size */
+    }
+    .social-links a {
+        font-size: 1.25rem; /* Adjust social link icons size if needed */
+    }
+}
+
+/* For very small devices, you might add another query */
+@media screen and (max-width: 320px) {
+    .container, .team-member {
+        padding: 0; /* Remove padding to use as much screen as possible */
+    }
+    #about-us h2 {
+        font-size: 1.25rem; /* Further decrease for very small screens */
+    }
+}
+
