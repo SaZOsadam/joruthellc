@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #031b253d;
+    background-color: #f3f4f5;
     z-index: 1; 
     color: #000;
 }
@@ -16,27 +16,38 @@ body{
     width: 16em;
     height: 100vh;
     position: fixed;
-    right: -256px; /* Hide the menu by default */
+    right: -250px; /* Hide the menu by default */
     top: 0;
     background: #031b2577; /* Semi-transparent background */
     z-index: 1; /* Ensure the menu is above other content */
     transition: 0.4s; /* Smooth transition when the menu slides in */
 }
 
+
 /* Styling for the profile image */
 .profile {
-    width: 8em;
-    height: 8em;
-    position: relative;
-    margin-top: 32%;
-    margin-left: 64px;
+    width: 16em;
     top: 4%;
     left: 1%;
     border: 0.2rem solid #031b2580;
     cursor: pointer;
     border-radius: 32%;
+    transition: 0.5s ease;
+    overflow: hidden;
+    margin-bottom: 55px;
+    
 }
-
+.profile:hover{
+    transform: scale(1.2);
+    
+}
+.professionalSkills{
+    top: 4%;
+    left: 1%;
+    cursor: pointer;
+    padding: 2vmax;
+    margin-right: 2vmax ;
+}
 /* Styling for the navigation list items */
 nav ul li {
     list-style: none;
@@ -52,46 +63,40 @@ nav ul li a {
 nav ul li a:hover,
 .dropdown-menu li a:hover {
     background-color: #031b25;
-    color: #fff;
+    color: #faf4f4;
+    padding: 16px;
+
+
 }
 
 /* Style the active link */
 nav ul li a.active,
 .dropdown-menu li a.active {
     background-color: #031b25;
-    color: #fff;
+    color: #000000;
 }
 
 /* Add a hover effect to the dropdown items */
 .dropdown-menu li a:hover {
     background-color: #031b25;
-    color: #fff;
-}
-
-/* Add a small arrow to indicate dropdowns */
-.dropdowns::after {
-    content: "▼";
-    margin-left: 4px;
-}
-
-/* Add a close button for the dropdown */
-.dropdown-menu::before {
-    content: "X";
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
+    color: #000;
 }
 
 /* Style the dropdown menu */
 .dropdown-menu {
     position: absolute;
-    background-color: #031b25;
+    background-image: linear-gradient(#031b25, #031b253f); 
     min-width: 32vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     display: none;
     animation: fadeIn 0.3s ease-in-out;
+}
+#dropdown-button{
+    background-color: #0e0d0d;
+    width: 2vw;
+    height: 2vh;
+
 }
 
 /* Animation for the dropdown menu */
@@ -280,16 +285,19 @@ nav ul li a.active,
 #services {
     padding: 16em 0;
     text-align: center;
-    position: relative; /* Removed fixed 'top' positioning for better responsiveness */
-    top: 24em;
+    position: relative;
+    top: 16em;
 }
 
-#services h2 {
-    font-size: 32px;
+#services h1 {
+    font-size: 50px;
     margin-bottom: 16px;
     color: #02040f;
 }
-
+#services h3{
+    font-size: 22px;
+    color: #000000;
+}
 #services .intro {
     font-size: 16px;
     line-height: 1.8;
@@ -332,113 +340,139 @@ nav ul li a.active,
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 16px;
+    background-color: #c5b9b9;
 }
 
 /* Styling for the about-us  *//* About Us - General Styles */
-#about-us {
-    padding: 50px 0;
+.about-container{
+    position: relative;
+    top: 1em;
 }
-#about-us .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 16px;
-}
-/* About Us - Story Article */
-.row{
+.heading{
+    width: 90%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
 }
-.flex{
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 20px;
-    margin-bottom: 40px;
+.heading h1{
+    font-size: 50px;
+    color: #030303;
+    margin: 55px;
 }
-#about-us .image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Makes sure the image is block level to take full width */
-    margin-bottom: 20px;
+.heading h1::after{
+   content: "";
+   width: 100%;
+   height: 4px;
+   display: block;
+   margin: 0 auto;
+   background-image: linear-gradient(#031b25, #031b253f);
+   
 }
-#about-us h2 {
-    font-size: 2rem; /* Responsive font size */
-    color: #333;
-    margin-bottom: 20px;
+.heading p{
+    font-size: 18px;
+    color: #000;
+    margin: 15px;
+    line-height: 25px;
 }
-#about-us h3 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 15px;
+.heading h3{
+    font-size: 28px;
+    color: #333333;
 }
-
-/* Styling for paragraphs within the About Us sections for better readability */
-#about-us p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 15px;
-}
-/* About Us - Team Members */
-.team-member {
-    margin-bottom: 40px;
-}
-
-.team-member img {
-    width: 100%; /* Force image to expand to the container width */
-    max-width: 300px; /* Max width, will scale down on smaller screens */
-    margin-bottom: 20px;
-}
-
-.team-member h4 {
-    font-size: 1.25rem;
+.container{
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 10px;
 }
-
-.team-member p {
-    margin-bottom: 20px;
+.about{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: auto;
+    border: 0.1rem solid rgba(3, 27, 37, 0.5);
+    border-radius: 10px;
+    background-image: linear-gradient(#031b25, #031b253f);
+    padding: 2vmax;
+}
+.about-team{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: #000;
+    border-radius: 10px;
+    background-image: linear-gradient(#031b25, #031b253f);
+    margin: 10vmax;
+    padding: 4vmax;
+    margin-bottom: 25px;
+}
+.about-image{
+   flex: 1;
+   margin-right: 40px;
+   overflow: hidden;
 }
 
-/* Buttons and links for interaction */
-.btn {
-    background-color: #333; /* Sample button background color */
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    margin: 55px;
+ }
+
+ .about-image:hover img{
+    transform: scale(1.2);
+ }
+.about-content{ 
+   flex: 1;
+}
+.about-content h2{ 
+    font-size: 23px;
+    margin-bottom: 15px;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #555; /* Darken button on hover for visual feedback */
-}
-
-/* Styling for social links if present */
-.social-links a {
+ }
+ .about-content p{ 
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+ }
+ .about-content .btn{ 
     display: inline-block;
-    margin-right: 10px;
-    font-size: 1rem; /* Set font size for social links */
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #555; /* Darken social link icon on hover */
-}
-
-/* General padding for sections inside About Us for better spacing */
-#about-us section {
-    padding: 20px;
-    border-bottom: 1px solid #eaeaea; /* Add a subtle bottom border for separation */
+    padding: 10px 20px;
+    background-color: #031b25;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+ }
+ .about-content .btn:hover{ 
+    background-color: #031b253f;
+    transform: translateY(-3px);  
+ }
+.social-links{
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-
-/* Last section should not have a bottom border */
-#about-us section:last-child {
-    border-bottom: none;
+.social-links a{
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   margin-right: 10px;
+   color: #fff;
+   background-color: #031b25;
+   transition: all 0.4s ease;
 }
+.social-links a:hover{
+    transform: translateY(-3px);
+}
+
 /* Styling for the Contact */
 #contact {
     padding: 64px 0;
@@ -537,15 +571,14 @@ nav ul li a.active,
 }
 
 .social-media {
-    padding: 0; /* Reset default padding */
-    margin: 0 16px; /* Adjusted margin for consistency */
+    padding: 0; 
     text-align: justify;
     font-family: Helvetica;
 }
 
 .social-media li {
     list-style: none;
-    margin: 8px; /* Adjusted for spacing around links */
+    margin: 8px; 
 }
 
 .social-media li a {
@@ -557,6 +590,24 @@ nav ul li a.active,
 .social-media li a:hover {
     color: #2458e6; /* Highlight on hover */
 }
+.social-links{
+    margin-bottom: 20px;
+}
+.social-links a{
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   margin-right: 10px;
+   color: #fff;
+   background-color: #031b25;
+   transition: all 0.4s ease;
+}
+.social-links a:hover{
+    transform: translateY(-3px);
+}
 
 .container-footer {
     display: flex;
@@ -564,65 +615,51 @@ nav ul li a.active,
     justify-content: left;
     align-items: center;
     max-width: 100%;
-    height: 32em;
+    
 }
 
 #direct-link, .link-info {
-    width: 100%; /* Full width for better responsiveness */
-    margin: 8px 0; /* Added margin for spacing */
-    padding: 8px; /* Adjust padding for spacing */
+    width: 100%; 
+    margin: 8px 0; 
+    padding: 8px; 
     display: flex;
-    flex-direction: column; /* Stack children elements vertically */
-    align-items: center; /* Center-align items */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 #direct-link, #social-info {
-    flex-basis: calc(50% - 32px); /* Half of the container minus margin */
+    flex-basis: calc(50% - 32px); 
     margin: 16px;
-    text-align: left; /* Align text to the left for readability */
+    text-align: left;
 }
-
-
 
 /* Copyright Styling */
 .copyright {
-    font-size: 0.875rem; /* Sets a smaller, more appropriate font size */
-    text-align: center; /* Centers the text within the div */
-    color: #ffffff; /* Adjust this to fit your website's color scheme */
-    padding: 8px 0; /* Adds padding above and below for spacing */
-    background-color: #031b25; /* Consider matching this to your footer's background for a cohesive look */
-    border-top: 2px solid #2458e6; /* Optional: adds a subtle top border for visual separation from content */
+    font-size: 0.875rem; 
+    text-align: center; 
+    color: #ffffff; 
+    padding: 8px 0; 
+    border-top: 2px solid #2458e6; 
     height: 8vh;
     font-family: Helvetica;
 }
 
 /* Styling for links to ensure they stand out and are easy to identify */
 .copyright p > a {
-    color: #2458e6; /* Adjust this color to fit your website's link color scheme */
-    text-decoration: none; /* Removes underline from links */
-    transition: color 0.4s ease-in-out; /* Smooth transition for hover effects */
+    color: #2458e6;
+    text-decoration: none; 
+    transition: color 0.4s ease-in-out; 
     font-family: Helvetica;
 }
 
 /* Hover effect for links to indicate they are clickable */
 .copyright p > a:hover {
-    color: #ffffff; /* Adjust hover color to ensure it differs from the normal state */
-    text-decoration: underline; /* Optionally add underline on hover for clarity */
+    color: #ffffff; 
+    text-decoration: underline;
 }
 
+/* Responsive behavior for the About Us section *//* Media Queries *//* Responsive styles */
 
-
-
-
-
-
-
-/* Responsive behavior for the About Us section */
-@media screen and (max-width: 768px) {
-   
-}
-
-/* Media Queries *//* Responsive styles */
 @media screen and (max-width: 768px) {
     .container-footer {
         width: 100%;
@@ -640,21 +677,24 @@ nav ul li a.active,
         margin: 8px 0;
     }
     #menu_bar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        right: 0;
+        height: 32vh;
+        position: fixed;
+        right:-256px;
         top: 0;
-        z-index: 2;
+        transition: 0.4s;
+        z-index: 1;
     }
-
     .profile {
-        width: 100px;
-        height: 100px;
+        width: 8em;
+        margin-top: 16px;
+        margin-left: 64px;
+    }
+    .professionalSkills{
+        width: 24em;
         margin-top: 16px;
         margin-left: 16px;
     }
-
+   
     nav ul li {
         margin: 16px 0;
     }
@@ -671,6 +711,8 @@ nav ul li a.active,
 
     #header {
         height: 64vh;
+        position: absolute;
+        top: 0px;
     }
 
     .logo {
@@ -716,41 +758,32 @@ nav ul li a.active,
         width: 128px;
         padding: 16px 0;
     }
-    #about-us {
-        padding: 30px 20px;
+    .heading{
+        padding: 0px 20px;
     }
-
-    #about-us .container {
-        padding: 0; /* Remove padding on smaller screens */
+    .heading h1{
+        font-size: 36px;
     }
-
-    #about-us h2 {
-        font-size: 1.75rem; /* Slightly smaller font size for smaller screens */
-        text-align: center;
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
     }
-
-    #about-us h3 {
-        font-size: 1.5rem;
+    .container{
+        padding: 0px;
     }
-    .team-member {
-        /* Each team member will take full width on smaller screens */
-        flex-basis: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .about{
+        padding: 20px;
     }
-
-    .team-member img {
-        /* Centering image on smaller screens */
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 200px;
-        display: block; /* Ensures the image doesn't inline with other elements */
+    .about-team{
+        padding: 20px;
     }
-    .team-member h4 {
-        font-size: 1.25rem; /* Ensure headings are readable on mobile */
+    .about-content{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .btn{
+        padding: 10px;
+        
     }
     .service-item {
         flex: 1 0 100%; /* Each item takes the full width on smaller screens */
