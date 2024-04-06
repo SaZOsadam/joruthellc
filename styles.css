@@ -252,7 +252,7 @@ nav ul li a.active,
     position: absolute;
     top: 0;
     left: 0;
-    background: #031b25;
+    background: #054b6985;
     z-index: -1;
     transition: 0.4s;
 }
@@ -261,6 +261,7 @@ nav ul li a.active,
 }
 .header-btn a:hover{
     color: #000;
+    background-color: #fff;
 }
 .header-text{
     position: relative;
@@ -292,11 +293,11 @@ nav ul li a.active,
 #services h1 {
     font-size: 50px;
     margin-bottom: 16px;
-    color: #02040f;
+    color: rgb(119, 119, 68);
 }
 #services h3{
     font-size: 22px;
-    color: #000000;
+    color: #8c9423;
 }
 #services .intro {
     font-size: 16px;
@@ -310,26 +311,27 @@ nav ul li a.active,
     flex-wrap: wrap;
 }
 
-.service-item {
+.service-category{
     flex: 1 0 400px; /* Adjust the flex basis as needed */
-    margin: 16px; /* Increase margin for better spacing */
-    padding: 16px; /* Increase padding for better content separation */
-    box-shadow: 0 2px 4px rgba(3, 27, 37, 0.5); /* Use rgba for better opacity control */
-    border-radius: 4px;
-    background-image: linear-gradient(#031b25, #031b253f); 
+    margin: 16px; /* Increase margin for better spacing */ 
+    padding: 16px;
 }
 
-.service-item h3 {
+
+
+.service-category h3 {
     font-size: 1.4em;
     margin-bottom: 8px;
+    color: #fff;
 }
 
-.service-item p {
+.service-category p {
     font-size: 16px;
     line-height: 1.8;
+    color: rgb(167, 164, 22);
 }
 
-.service-item .product {
+.service-category .product {
     width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
     border: 0.1rem solid rgba(3, 27, 37, 0.5); /* Use rgba for better opacity control */
@@ -340,7 +342,18 @@ nav ul li a.active,
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 16px;
-    background-color: #c5b9b9;
+
+}
+.service-category .item-images {
+    display: none;
+}
+.item-image {
+    margin: 16px;
+    padding: 16px; /* Increase padding for better content separation */
+    box-shadow: 0 2px 4px rgba(3, 27, 37, 0.5); /* Use rgba for better opacity control */
+    border-radius: 4px;
+    background-image: linear-gradient(#031b25, #031b253f);
+
 }
 
 /* Styling for the about-us  *//* About Us - General Styles */
@@ -350,6 +363,7 @@ nav ul li a.active,
 }
 .heading{
     width: 90%;
+    height: 16em;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -408,7 +422,7 @@ nav ul li a.active,
     padding: 4vmax;
     margin-bottom: 25px;
 }
-.about-image{
+.about-image, .item-image{
    flex: 1;
    margin-right: 40px;
    overflow: hidden;
@@ -421,7 +435,13 @@ nav ul li a.active,
     transition: 0.5s ease;
     margin: 55px;
  }
-
+.item-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    margin: 55px;
+}
  .about-image:hover img{
     transform: scale(1.2);
  }
@@ -700,19 +720,32 @@ nav ul li a.active,
     }
 
     #menuBtn {
-        right: 8px;
-        top: 8px;
+        right: 32px;
+        top: 4px;
     }
 
     #menuBtn img {
+        position: fixed;
         width: 64px;
         height: 64px;
+        width: 2em;
+        height: 2em;
+        top: 0;
+        display: none;
+    }
+
+    #menuBtn h6{
+        position: relative;
+        top: 4em;
+        right: 8px;
+        color: #0066ff;
     }
 
     #header {
-        height: 64vh;
-        position: absolute;
+        height: 55vh;
+        position: relative;
         top: 0px;
+        width: 100%;
     }
 
     .logo {
@@ -735,21 +768,29 @@ nav ul li a.active,
     }
 
     .feature-container {
+        position: relative;
         top: 4rem;
         height: 64vh;
+        margin-bottom: 4rem;
     }
 
     .feature-container h2 {
         padding-top: 2rem;
-        font-size: 2vmax;
+        font-size: 4vmax;
     }
 
     .feature-container .featureImage {
         top: 2rem;
-        height: 32vh;
-        margin-top: 2rem;
+        height: 35vh;
+        margin: 2rem;
+        width: 64%;
+       
     }
-
+    .featureImage{
+        flex: 1 0 100%; 
+        margin-bottom: 2rem;
+       
+    }
     .header-btn {
         margin: 64px auto 0;
     }
@@ -758,11 +799,23 @@ nav ul li a.active,
         width: 128px;
         padding: 16px 0;
     }
+    #services{
+        position: relative;
+        top: 60em;
+        
+    }
     .heading{
         padding: 0px 20px;
+        height: 32em;
     }
+  
     .heading h1{
         font-size: 36px;
+    }
+    .heading h2{
+        font-size: 45px;
+        padding: 0;
+        margin: 0;
     }
     .heading p{
         font-size: 17px;
@@ -770,12 +823,14 @@ nav ul li a.active,
     }
     .container{
         padding: 0px;
+        width: 100%;
     }
     .about{
         padding: 20px;
     }
     .about-team{
         padding: 20px;
+        width: 100%;
     }
     .about-content{
         padding: 0px;
@@ -785,18 +840,36 @@ nav ul li a.active,
         padding: 10px;
         
     }
-    .service-item {
+    .about-container{
+        position: relative;
+        top: 38rem;
+        margin-bottom: 24em;
+        padding: 2em;
+        width: 100%;
+    }
+    .service-category {
         flex: 1 0 100%; /* Each item takes the full width on smaller screens */
+    }
+    .about-image img{
+        height: 32vh;
+        width: 80%;
+    }
+    .contact-form{
+        width: 80%;
     }
     .container-footer {
         flex-direction: row; /* Lay out children in a row */
         justify-content: space-between; /* Distribute items evenly with space around them */
+        width: 100%;
     }
 
     #direct-link, #social-info {
         width: calc(50% - 20px); /* Take up 50% of the container width minus the margin */
         flex-basis: 100%; /* Stack vertically on smaller screens */
         margin: 10px 0;
+    }
+    #footer{
+        width: 100%;
     }
 }
 /* Adding some space on smaller screens *//* Landscape phones and smaller */
@@ -806,15 +879,6 @@ nav ul li a.active,
     }
     #about-us h2 {
         font-size: 1.5rem; /* Decrease the font size for smaller screens */
-    }
-    .team-member {
-        padding: 0 15px; /* Add padding to the sides for better spacing */
-    }
-    .team-member h4 {
-        font-size: 1rem; /* Adjust the team member name font size */
-    }
-    .team-member p {
-        font-size: 0.875rem; /* Adjust the paragraph font size for better readability */
     }
     .btn {
         padding: 8px 16px; /* Adjust button padding */

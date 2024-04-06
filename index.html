@@ -33,7 +33,7 @@
     </div>
     <div id="menuBtn">   
         <img src="image/menu.jpg" id="menu" alt="Menu Button">
-        <p>MENU</p>
+        <h6>MENU</h6>
     </div>
     <div>
         <section id="header" class="header"> 
@@ -62,52 +62,73 @@
             </div>
         </section> 
     </div>
-   
-    <div>
-        <!--Services section starts here-->
+   <!--Services section starts here-->
         <section id="services">
             <div class="services-container">
                 <h1>Services</h1>
                 <h3><em>Trust us to deliver not just services, but solutions that make your space work for you.</em></h3>            
                 <div class="service-list">
-                    <div class="service-item" id="item1">
-                        <h3>Service 1: Plumbing</h3>
+                    <!-- Plumbing Service Category -->
+                    <div class="service-category" id="plumbing-services">
+                        <h3>Plumbing</h3>
                         <p>Leak fixes, installations, and everything in between.</p>
-                        <img src="Plumbing.jpg" alt="Plumbing Image">
+                        <!-- Container for plumbing images -->
+                        <div class="service-images">
+                            <div class="item-image">
+                                <img src="image/Plumbing1.jpg" alt="Plumbing Image">
+                            </div>
+                            <div class="item-image">
+                                <img src="image/Plumbing2.jpg" alt="Plumbing Image">
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-item" id="item2">
+                    <div class="service-category" id="electrical-services">
                         <h3>Electrical</h3>
                         <p>Safe and reliable electrical solutions. </p>
-                        <img src="Electrical.jpg" alt="Electrical Image">
+                        <div class="item-image">
+                            <img src="image/Electrical1.jpg" alt="Electrical Image">
+                        </div>
+                        <div class="item-image">
+                            <img src="image/background2.jpg" alt="Remodeling Image">
+                        </div>
                     </div>
-                    <div class="service-item" id="item3">
+                    <div class="service-category" id="carpentry-services">
                         <h3>Carpentry</h3>
                         <p>Custom carpentry that brings your space to life.</p>
-                        <img src="Carpentry.jpg" alt="Carpentry Image">
+                        <div class="item-image">
+                            <img src="image/Carpentry1.jpg" alt="Carpentry Image">
+                        </div>
+                        <div class="item-image">
+                            <img src="image/Carpentry2.jpg" alt="Carpentry Image">
+                        </div>
+                        <div class="item-image">
+                            <img src="image/Carpentry3.jpg" alt="Carpentry Image">
+                        </div>
                     </div>
-                    <div class="service-item" id="item3">
+                    <div class="service-category" id="renovationRemodeling-services">
                         <h3>Renovation/Remodeling</h3>
                         <p>Combine practical utility with lifestyle.</p>
-                        <img src="Remodeling.jpg" alt="Remodeling Image">
+                        <div class="item-image">
+                            <img src="image/background3.jpg" alt="Remodeling Image">
+                        </div>
+                        <div class="item-image">
+                            <img src="image/carpenter-tool-collection.jpg" alt="Remodeling Image">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
     <!--  About Us section starts here-->
-    <section class="about-container">
+    <section class="about-container" id="about-us">
         <div class="heading">
             <h1>ABOUT US</h1>
             <h3>Discover Our Team's Story</h3>
             <h4><em>Crafting Comfort & Confidence in Every Home</em></h4>
-            <p>Founded in April 2020 by Joseph Oladiran, Joruthe LLC began as a small, passionate endeavor to bring quality and reliability into the home repair and renovation industry. With a background in building technology and civil engineering, Joseph saw an opportunity to blend technical expertise with a personal touch, transforming houses into homes that not only look beautiful but feel right.</p>
         </div>  
         <div class="container">
             <div class="about">
-                <div class="about-image">
-                    <img src="" alt="">
-                </div>
                 <div class="about-content">
+                    <p>Founded in April 2020 by Joseph Oladiran, Joruthe LLC began as a small, passionate endeavor to bring quality and reliability into the home repair and renovation industry. With a background in building technology and civil engineering, Joseph saw an opportunity to blend technical expertise with a personal touch, transforming houses into homes that not only look beautiful but feel right.</p>
                     <p>Over the years, we've grown from a one-person operation into a thriving team of skilled professionals, each of us dedicated to making your home renovation dreams come true. Our journey has been built on a foundation of trust, craftsmanship, and a deep understanding of our clients' needs.</p>
                     <p>We believe in not just meeting expectations but exceeding them, ensuring every project, big or small, is completed with the utmost care and precision. At Joruthe LLC, we're more than just builders, we're creators of comfort and confidence, transforming spaces into personalized sanctuaries where life's best moments happen.</p>       
                     <div class="social-links">
@@ -115,112 +136,111 @@
                         <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
+                    <div>
+                        <a href="#about-team" id="readMoreBtn" class="btn">Read More</a>
+                    </div>
                 </div>
             </div>        
-            <div class="heading">
-                <h2><em>Meet the Team</em></h2>
-            </div>  
-            
-            <div class="about-team">  
-                <div class="about-image">
-                    <img src="image/profile.jpg" alt="Joseph Oladiran - CEO" class="profile">
-                    <h3>Joseph Oladiran - CEO</h3> 
-                </div>
-                <div class="about-content">
-                    <div id="josephOladiran" class="professionalSkills">
-                        <p>Joseph, brings over 40 years of experience, specialized knowledge, and a personal touch to his role. Born in Nigeria, he has overseen numerous projects, from simple family homes to large-scale reticulatory water systems and reservoirs. An adept chess player, Joseph loves to see a well-thought-out project plan executed to the finest detail, reflecting his strategic and meticulous approach.</p>
+            <div id="meetTeam">
+                <h2 class="heading"><em>Meet the Team</em></h2> 
+                <div class="about-team">  
+                    <div class="about-image">
+                        <img src="image/profile.jpg" alt="Joseph Oladiran - CEO" class="profile">
+                        <h3>Joseph Oladiran - CEO</h3> 
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="about-team">  
-                <div class="about-content">
-                    <div id="carlosMelendez" class="professionalSkills">
-                        <p>Carlos Melendez brings over 20 years of experience as a lead carpenter. Originally from Hounduras, he takes pride in his meticulous work and passion for crafting beautiful spaces. Carlos specializes in custom cabinetry, millwork, and finish carpentry. When not working , Carlos enjoys spending time with his family and playing soccer.</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div class="about-content">
+                        <div id="josephOladiran" class="professionalSkills">
+                            <p>Joseph, brings over 40 years of experience, specialized knowledge, and a personal touch to his role. Born in Nigeria, he has overseen numerous projects, from simple family homes to large-scale reticulatory water systems and reservoirs. An adept chess player, Joseph loves to see a well-thought-out project plan executed to the finest detail, reflecting his strategic and meticulous approach.</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class=".about-image">
-                    <img src="image/profile.jpg" alt="Carlos Melendez - Lead Carpenter" class="profile">
-                    <h3>Carlos Melendez - Lead Carpenter</h3> 
-                </div>
-            </div>
-            <div class="about-team">  
-                <div class="about-image">
-                    <img src="image/profile.jpg" alt="Senjour Marley - Master Plumber" class="profile">
-                    <h3>Senjour Marley - Master Plumber.</h3> 
-                </div>
-                <div class="about-content">
-                    <div id="senjourMarley" class="professionalSkills">
-                        <p> Senjour Marley brings over 15 years of experience as a licensed master plumber. Originally from Haiti, he takes pride in his meticulous work and passion for problem-solving. When not working, Senjour enjoys woodworking and music.</p>
+                
+                <div class="about-team">  
+                    <div class="about-content">
+                        <div id="carlosMelendez" class="professionalSkills">
+                            <p>Carlos Melendez brings over 20 years of experience as a lead carpenter. Originally from Hounduras, he takes pride in his meticulous work and passion for crafting beautiful spaces. Carlos specializes in custom cabinetry, millwork, and finish carpentry. When not working , Carlos enjoys spending time with his family and playing soccer.</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div class=".about-image">
+                        <img src="image/profile.jpg" alt="Carlos Melendez - Lead Carpenter" class="profile">
+                        <h3>Carlos Melendez - Lead Carpenter</h3> 
                     </div>
                 </div>
-            </div>
-            <div class="about-team">  
-                <div class="about-content">
-                    <div id="joyTjesnimi" class="professionalSkills">
-                        <p> With over 10 years of experience in interior design, Joy has a keen eye for transforming spaces into stylish and functional areas. <br> Specializing in modern and sustainable designs, she believes that a well-designed home can improve daily life and bring joy and satisfaction. <br> Outside of work, Joy enjoys exploring flea markets for unique finds and is an avid DIY enthusiast.</p> 
+                <div class="about-team">  
+                    <div class="about-image">
+                        <img src="image/profile.jpg" alt="Senjour Marley - Master Plumber" class="profile">
+                        <h3>Senjour Marley - Master Plumber.</h3> 
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class=".about-image">
-                    <img src="image/profile.jpg" alt="Joy Tjesnimi - Interior Designer" class="profile">
-                    <h3>Joy Tjesnimi - Interior Designer.</h3> 
-                </div>
-            </div>
-            <div class="about-team">  
-                <div class="about-image">
-                    <img src="image/profile.jpg" alt="Charles Parker" class="profile">
-                    <h3>Charles Parker</h3> 
-                </div>
-                <div class="about-content">
-                    <div id="charlesParker" class="professionalSkills">
-                        <p>Charles Parker, with over 15 years of experience as a lead in garage door specialization, epitomizes the blend of precision and rhythm in both his professional and personal life. Charles's expertise spans installation, repairs, and refurbishing of garage doors, ensuring each project is handled with the utmost care and technical skill. </p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div class="about-content">
+                        <div id="senjourMarley" class="professionalSkills">
+                            <p> Senjour Marley brings over 15 years of experience as a licensed master plumber. Originally from Haiti, he takes pride in his meticulous work and passion for problem-solving. When not working, Senjour enjoys woodworking and music.</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-team">  
-                <div class="about-content">
-                    <div id="daveGudmann" class="professionalSkills">
-                        <p>Dave Gudmann is not just a Master Electrician; he's a testament to where skill, passion, and inspiration can lead you in life. Born and raised in the hearty Rust Belt, where resilience and hard work are a way of life, Dave brings more than just technical expertise to his craft. He's a man who dreams in circuits and wires, often saying that some of his best work was first visualized amid the surreal landscapes of his dreams.</p>
+                <div class="about-team">  
+                    <div class="about-content">
+                        <div id="joyTjesnimi" class="professionalSkills">
+                            <p> With over 10 years of experience in interior design, Joy has a keen eye for transforming spaces into stylish and functional areas. <br> Specializing in modern and sustainable designs, she believes that a well-designed home can improve daily life and bring joy and satisfaction. <br> Outside of work, Joy enjoys exploring flea markets for unique finds and is an avid DIY enthusiast.</p> 
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div>
-                        <a href="index.html" class="btn">Read More</a>
+                    <div class=".about-image">
+                        <img src="image/profile.jpg" alt="Joy Tjesnimi - Interior Designer" class="profile">
+                        <h3>Joy Tjesnimi - Interior Designer.</h3> 
                     </div>
                 </div>
-                <div class=".about-image">
-                    <img src="image/profile.jpg" alt="Dave Gudmann" class="profile">
-                    <h3>Dave Gudmann</h3> 
-                </div>  
-            </div> <!---->
+                <div class="about-team">  
+                    <div class="about-image">
+                        <img src="image/profile.jpg" alt="Charles Parker" class="profile">
+                        <h3>Charles Parker</h3> 
+                    </div>
+                    <div class="about-content">
+                        <div id="charlesParker" class="professionalSkills">
+                            <p>Charles Parker, with over 15 years of experience as a lead in garage door specialization, epitomizes the blend of precision and rhythm in both his professional and personal life. Charles's expertise spans installation, repairs, and refurbishing of garage doors, ensuring each project is handled with the utmost care and technical skill. </p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-team">  
+                    <div class="about-content">
+                        <div id="daveGudmann" class="professionalSkills">
+                            <p>Dave Gudmann is not just a Master Electrician; he's a testament to where skill, passion, and inspiration can lead you in life. Born and raised in the hearty Rust Belt, where resilience and hard work are a way of life, Dave brings more than just technical expertise to his craft. He's a man who dreams in circuits and wires, often saying that some of his best work was first visualized amid the surreal landscapes of his dreams.</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class=".about-image">
+                        <img src="image/profile.jpg" alt="Dave Gudmann" class="profile">
+                        <h3>Dave Gudmann</h3> 
+                    </div>  
+                </div> <!---->
+            </div>    
         </div>
     </section>
     <!--  Contact section starts here-->
